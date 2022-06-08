@@ -27,7 +27,7 @@ jobs:
       run: mvn clean -DskipTests package
 
     - name: Run Test Cases
-      run: mvn -Dmaven.test.failure.ignore=true test
+      run: mvn -Dmaven.test.failure.ignore=false test
 
     - name: Test Report
       uses: dorny/test-reporter@v1
