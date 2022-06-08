@@ -7,7 +7,7 @@ class BasicMathOperationsTest {
 
     @Test
     void addNumbers() {
-        assertEquals(150, BasicMathOperations.addNumbers(100, 50));
+        assertEquals(151, BasicMathOperations.addNumbers(100, 50));
     }
 
     @Test
