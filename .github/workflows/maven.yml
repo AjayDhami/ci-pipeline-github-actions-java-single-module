@@ -35,13 +35,13 @@ jobs:
           cache: maven
 
       - name: Run Test Cases
-        run: mvn clean '-Dtest=*Test' -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec test
+        run: mvn clean '-Dtest=*Test' -Djacoco.destFile=exportJacoco/jacoco.exec test
 
       - name: Upload jacoco exec test results
         uses: actions/upload-artifact@v2
         with:
           name: tests-jacoco
-          path: exportJacoco/jacoco-slow-it.exec
+          path: exportJacoco/jacoco.exec
 
       - name: Tests Report
         uses: dorny/test-reporter@v1
