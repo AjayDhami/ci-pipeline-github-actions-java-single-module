@@ -35,7 +35,7 @@ jobs:
           cache: maven
 
       - name: Run Test Cases
-        run: mvn '-Dtest=*Test' verify -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
+        run: mvn '-Dtest=*Test' test -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
 
       - name: Tests Report
         uses: dorny/test-reporter@v1
