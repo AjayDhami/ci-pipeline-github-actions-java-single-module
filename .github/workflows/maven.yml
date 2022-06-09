@@ -37,6 +37,12 @@ jobs:
       - name: Run Test Cases
         run: mvn '-Dtest=*Test' test -Djacoco.destFile=exportJacoco/jacoco-slow-it.exec
 
+      - name: Upload jacoco exec test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: tests-jacoco
+          path: exportJacoco/jacoco-slow-it.exec
+
       - name: Tests Report
         uses: dorny/test-reporter@v1
         if: always()
@@ -45,9 +51,3 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           fail-on-error: true
-
-      - name: Upload jacoco exec test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: tests-jacoco
-          path: exportJacoco/jacoco-slow-it.exec
