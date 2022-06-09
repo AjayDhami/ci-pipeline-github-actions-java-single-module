@@ -10,12 +10,12 @@ class BasicMathOperationsTest {
         assertEquals(150, BasicMathOperations.addNumbers(100, 50));
     }
 
-  /*  @Test
+    @Test
     void subNumbers() {
         assertEquals(50, BasicMathOperations.subNumbers(100, 50));
     }
 
-    @Test
+   /* @Test
     void multiplyNumbers() {
         assertEquals(5000, BasicMathOperations.multiplyNumbers(100, 50));
     }*/

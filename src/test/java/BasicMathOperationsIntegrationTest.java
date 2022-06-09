@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BasicMathOperationsIntegrationTest {
 
-//    @Test
+    @Test
     void addNumbers() {
         assertEquals(100, BasicMathOperations.addNumbers(50, 50));
     }
